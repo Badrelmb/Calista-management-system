@@ -1,0 +1,230 @@
+body {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ background: url('images/DALL·E\ 2024-06-26\ 11.56.34\ -\ A\ minimalistic\ background\ with\ a\ soft\ pink\ color\ and\ light\,\ delicate\ flower\ patterns.\ The\ flowers\ should\ be\ subtle\ and\ not\ interfere\ with\ the\ foregrou.webp') no-repeat center center fixed;
+ background-size: cover;
+}
+
+.container {
+ flex: 1;
+ padding-bottom: 20px;
+}
+
+.header,
+.footer {
+ text-align: center;
+ padding: 20px;
+ 
+}
+
+.footer {
+ position: relative;
+ bottom: 10px;
+ right: 10px;
+ font-size: 14px;
+ font-weight: bold;
+}
+
+.header h1 {
+ display: inline-block;
+ margin: 0;
+ color:rgb(237, 42, 78);
+}
+
+.header a {
+ color: inherit;
+ /* Use the same color as the parent element */
+ text-decoration: none;
+ /* Remove underline */
+}
+
+.header img {
+ margin-left: 10px;
+ width: 24px;
+ height: 24px;
+}
+
+.main-buttons {
+ display: flex;
+ justify-content: center;
+ margin-top: 120px;
+}
+
+.main-buttons .btn {
+ margin: 10px;
+ width: 200px;
+ height: 100px;
+ font-size: 18px;
+}
+
+/* Modal CSS */
+/* Modal CSS */
+.modal {
+ display: none;
+ position: fixed;
+ z-index: 1000;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+ background-color: rgba(0, 0, 0, 0.8);
+ justify-content: center;
+ align-items: center;
+}
+
+.modal-content-container {
+ position: relative;
+ max-width: 70%;
+ max-height: 70%;
+ margin: auto;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.modal-content {
+ width: 100%;
+ height: auto;
+ max-height: 70%;
+ object-fit: contain;
+}
+
+.close {
+ position: fixed;
+ top: 10px;
+ right: 20px;
+ color: white !important;
+ z-index: 2000;
+ font-size: 30px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.prev,
+.next {
+ position: fixed;
+ top: 50%;
+ transform: translateY(-20%);
+ color: white !important;
+ font-size: 30px;
+ font-weight: bold;
+ cursor: pointer;
+ user-select: none;
+ z-index: 1001;
+ padding: 10px;
+ 
+}
+
+.prev {
+ left: 20px;
+}
+
+.next {
+ right: 20px;
+}
+
+.prev:hover,
+.next:hover,
+.close:hover {
+ color: #bbb;
+}
+
+/* Ensure images are responsive */
+img {
+ max-width: 100%;
+ height: auto;
+}
+
+/* Responsive header */
+.header h1 {
+ font-size: 1.5em;
+ text-align: center;
+}
+
+.header img {
+ width: 30px;
+ /* Adjust as needed */
+ height: auto;
+ display: block;
+ margin: 0 auto;
+}
+
+/* Responsive form */
+form {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 15px;
+}
+
+.form-group {
+ flex: 1 1 100%;
+ /* Full width on small screens */
+}
+
+@media (min-width: 768px) {
+ .form-group {
+  flex: 1 1 48%;
+  /* Two columns on medium screens */
+ }
+}
+
+/* Responsive table */
+table {
+ width: 100%;
+ border-collapse: collapse;
+}
+
+th,
+td {
+ padding: 8px;
+ text-align: left;
+}
+
+th {
+ background-color: #f2f2f2;
+}
+
+/* Adjust font sizes for smaller screens */
+@media (max-width: 600px) {
+ .container {
+  padding: 15px;
+ }
+
+ h2 {
+  font-size: 1.2em;
+ }
+
+ .btn {
+  font-size: 0.8em;
+  padding: 8px 10px;
+ }
+
+ th,
+ td {
+  font-size: 0.8em;
+  padding: 6px;
+ }
+
+ .form-inline {
+  flex-direction: column;
+ }
+
+ .form-inline .form-control {
+  width: 100%;
+  margin-bottom: 10px;
+ }
+}
+
+/* Ensure modal is responsive */
+.modal-content-container {
+ max-width: 100%;
+ width: auto;
+ padding: 20px;
+}
+
+.modal-content {
+ max-width: 100%;
+ height: auto;
+}
